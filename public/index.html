@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Sensor demo</title>
+    <meta name="description" content="Iot sensor demo">
+    <meta name="author" content="Jonas Wühr">
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="http://getskeleton.com/dist/css/normalize.css">
+    <link rel="stylesheet" href="http://getskeleton.com/dist/css/skeleton.css">
+
+    <script src="https://cdn.plot.ly/plotly-3.4.0.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+
+        <div class="row">
+            <div class="twelve columns">
+                <h1>Sensor Data Plotter</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
+                <div id="plot" style="width: 920px; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Backend communication
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="script/sensor.js" type="text/javascript"></script>
+    <script>update();</script>
+</body>
+
+</html>
