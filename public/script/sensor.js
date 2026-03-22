@@ -2,7 +2,7 @@ function update() {
     const http = new XMLHttpRequest();
     console.log(window.location.hostname);
     http.open(
-        'GET', String('http://127.0.0.1:5000/temperature')
+        'GET', String('http://' + window.location.hostname + ':5000/temperature')
     );
     http.setRequestHeader("Access-Control-Allow-Origin", "*")
     http.send();
