@@ -21,12 +21,18 @@ function updateData(data) {
    };
   
    var dataset = []
-   
+   console.log(data) 
    for(var d in data) {
+       var datetime = []
+       for(t in data[d].time) {
+           var timestamp = new Date(data[d].time[t] * 1000)
+           datetime.push(timestamp.toISOString())
+       }
        dataset.push({
 	       name: data[d].dev_id,
-               y: data[d].celsius,
-               type: 'scatter'
+           x: datetime,
+           y: data[d].celsius,
+           type: 'scatter'
        });
    }
    Plotly.newPlot('plot', dataset, layout);
